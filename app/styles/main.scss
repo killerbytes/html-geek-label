@@ -1,0 +1,154 @@
+// bower:scss
+// endbower
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto:100');
+
+$primary: #d83454;
+$white: #FFF;
+$dark-grey: #414042;
+$grey: #f1f2f2;
+
+
+@import "components/buttons";
+@import "components/forms";
+@import "components/lists";
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: $dark-grey;
+}
+h1{
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+}
+a, button{
+  cursor: pointer;
+}
+
+section{
+  background-color: $grey;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  >.content{
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    width: 80vh;
+    p{
+      font-size: 20px;
+      span{
+        color: $primary;
+      }
+    }
+    .control{
+      position: absolute;
+      bottom: 2rem;
+      width: 100%;
+      left: 0;
+    }
+
+  }
+}
+
+.logo{
+  margin-bottom: 3rem;
+  img{
+    width: 200px;
+  }
+}
+
+.hero-photo{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+  img{
+    width: 100%;
+  }
+}
+
+p.sub-title{
+  font-family: 'Raleway', sans-serif;
+  max-width: 75%;
+  margin: auto;
+  font-size: 15px;
+}
+
+.home{
+  background-color: $primary;
+  color: $white;
+}
+.services{
+  background-color: transparent;
+}
+
+.services,
+.clients,
+.location,
+.contact{
+  .content{
+    margin: 0 auto;
+  }
+}
+
+.map{
+  margin-top: 2rem;
+  background-image: url(../images/map.jpg);
+  height: 290px;
+  width: 100%;
+  position: absolute;
+  background-position: center center;
+  top: 7rem;
+  left: 0;
+  box-shadow: 0px 0px 3px 0px inset;
+}
+
+img{
+  width: 100%;
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.circle-item{
+  background-color: $primary;
+  padding: 1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  margin: 2rem 1rem 1rem;
+  transition-property: background;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+  img{
+    width: 60%;
+    margin: auto;
+  }
+  &:hover{
+    background-color: darken($primary, 10%);
+  }
+}
+
+.slider{
+  display: flex;
+  margin: 4rem auto;
+  .slider-item{
+    padding: 1rem 2rem;
+  }
+  .slider-control{
+    display: flex;
+    align-items: center;
+    color: #5e6b6e;
+    padding: 1rem;
+    font-size: 20px;
+    &:hover{
+      background-color: darken($grey, 10%);
+      color: darken(#5e6b6e, 10%);
+    }
+  }
+}
+
+@import "components/media";

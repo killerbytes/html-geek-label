@@ -1,0 +1,20 @@
+form{
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+  input,
+  textarea{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 2px solid darken($grey, 10%);
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  ::-webkit-input-placeholder { color: $dark-grey; }
+  ::-moz-placeholder { color: $dark-grey; }
+  :-ms-input-placeholder { color: $dark-grey;}
+  :-moz-placeholder { color: $dark-grey; }
+}
