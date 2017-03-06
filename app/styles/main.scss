@@ -13,6 +13,9 @@ $grey: #f1f2f2;
 @import "components/forms";
 @import "components/lists";
 
+html,body{
+  height: 100%; 
+}
 body{
   font-family: 'Roboto', sans-serif;
   color: $dark-grey;
@@ -26,15 +29,16 @@ a, button{
 }
 
 section{
-  background-color: $grey;
   height: 100vh;
-  display: flex;
+  background-color: $grey;
+  display: table;
   position: relative;
-  >.content{
-    padding: 1rem;
-    margin: auto;
-    text-align: center;
-    width: 80vh;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  .content{
+    display: table-cell;
+    vertical-align: middle;
     p{
       font-size: 20px;
       span{
@@ -43,12 +47,18 @@ section{
     }
     .control{
       position: absolute;
+      left: 0;
       bottom: 2rem;
       width: 100%;
-      left: 0;
     }
-
+    
   }
+
+}
+
+.contact{
+  height: auto;
+  padding-bottom: 3rem;
 }
 
 .logo{
@@ -58,20 +68,20 @@ section{
   }
 }
 
+.no-padding{
+  padding: 0 !important;
+}
 .hero-photo{
-  width: 80%;
+  width: 40%;
   margin: auto;
   margin-bottom: 3rem;
-  img{
-    width: 100%;
-  }
 }
 
-p.sub-title{
+.content p.sub-title{
   font-family: 'Raleway', sans-serif;
-  max-width: 75%;
   margin: auto;
   font-size: 15px;
+  width: 40%;
 }
 
 .home{
@@ -82,36 +92,22 @@ p.sub-title{
   background-color: transparent;
 }
 
-.services,
-.clients,
-.location,
-.contact{
-  .content{
-    margin: 0 auto;
-  }
-}
 
 .map{
-  margin-top: 2rem;
   background-image: url(../images/map.jpg);
   height: 290px;
   width: 100%;
-  position: absolute;
   background-position: center center;
-  top: 7rem;
-  left: 0;
   box-shadow: 0px 0px 3px 0px inset;
 }
 
 img{
-  width: 100%;
   image-rendering: -moz-crisp-edges;         /* Firefox */
   image-rendering:   -o-crisp-edges;         /* Opera */
   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 }
-
 .circle-item{
   background-color: $primary;
   padding: 1rem;
@@ -134,17 +130,19 @@ img{
 }
 
 .slider{
-  display: flex;
   margin: 4rem auto;
+  display: flex;
+  align-items: center;
   .slider-item{
-    padding: 1rem 2rem;
+    padding: 1rem;
+    img{
+      max-width: 110px;
+    }
   }
   .slider-control{
-    display: flex;
-    align-items: center;
     color: #5e6b6e;
-    padding: 1rem;
     font-size: 20px;
+    width: 5%;
     &:hover{
       background-color: darken($grey, 10%);
       color: darken(#5e6b6e, 10%);

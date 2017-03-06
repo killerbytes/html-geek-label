@@ -1,18 +1,87 @@
-@media only screen and (max-width: 768px) {
-    .circle-item {
-        width: 70px;
-        height: 70px;
+@media only screen 
+and (max-width: 768px) {
+  .content{
+    padding: 1rem;
+    p.sub-title{
+      width: 80%;
+    }
+  }
 
+  .circle-item {
+      width: 70px;
+      height: 70px;
+
+  }
+  .slider{
+    ul li{
+      width: 100%;
+      display: block;
     }
     .slider-item{
       width: 60%;
       margin: auto;
     }
-    section > .content{
-      padding: 1rem 2rem;
-    }
 
-    form{
-      width: 80%;
+  }
+
+  .hero-photo{
+    width: 70%;
+    max-width: 70%;
+    img{
+      width: 100%;
     }
+  }
+
+  form{
+    width: 100%;
+  }
+  
+}
+
+@media only screen 
+and (max-width: 768px)
+and (orientation: landscape){
+  h1{
+    font-size: 2rem;
+  }
+  section .content{
+    width: 90%;
+    .hero-photo{
+      width: 40%;
+      margin-bottom: 1rem;
+    }
+    .control{
+      bottom: 1rem;
+    }
+    
+  }
+  .services,
+  .location{
+    .content{
+      vertical-align: baseline;
+    }    
+  }
+  form{
+    width: 80%;
+    input, textarea{
+      font-size: 12px;
+      padding: 8px;
+      margin-bottom: .5rem;
+    }
+  }
+  .slider{
+    ul li{
+      width: 33%;
+      margin: auto;
+      display: table-cell;
+    }
+    .slider-item{
+      width: 60%;
+      margin: auto;
+    }
+  }
+  
+  .map{
+    height: 180px;
+  }
 }

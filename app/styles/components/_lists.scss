@@ -12,7 +12,11 @@ ul.list-services{
 }
 
 ul.list-clients{
+  display: table;
+  width: 90%;
   li{
-    display: inline-block;
+    width: 33%;
+    display: table-cell;
+    vertical-align: middle;
   }
 }
