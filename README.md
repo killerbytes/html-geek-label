@@ -1,4 +1,4 @@
-http://azd-geek-label.s3-website-us-west-2.amazonaws.com/
+http://azd-geek-label.s3-website-ap-southeast-1.amazonaws.com/
 
 # html-geek-label
 HTML/CSS SPA
